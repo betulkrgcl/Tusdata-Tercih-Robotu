@@ -10,7 +10,7 @@ const preferenceAct = {
         this.SearchInput();
         this.PreferenceSave();
     },
-
+// buttons control
     ButtonController: function () {
         const rejectBtn = document.querySelector('.preference-list__buttons__reject');
         const acceptBtn = document.querySelector('.preference-list__buttons__accept');
