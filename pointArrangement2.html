@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/pointArrangement.css">
+    <link rel="stylesheet" href="assets/css/global/robotLeftSide.css">
+    <link rel="stylesheet" href="assets/css/global/robotRightSide.css">
+    <link rel="stylesheet" href="assets/css/global/pageStepper.css">
+    <link rel="stylesheet" href="assets/css/global/global.css">
+    <link rel="stylesheet" href="assets/css/global/upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="point-arrangement">
+        <div class="robot__left-side">
+            <div class="robot__left-side__item">
+                <figure class="robot__left-side__item__figure">
+                    <img src="assets/images/ws.png" alt="">
+                </figure>
+                <div class="robot__left-side__item__text layout__content__side__advert__robot__text">
+                    <div class="layout__content__side__advert__robot__text__icon"><i class="icofont-close-line close-robo-text"></i></div>
+                    <div class="text-animation">-</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="robot__right-side">
+            <div class="robot__right-side__item">
+                <div class="page-stepper">
+                    <div class="page-stepper__item page-stepper__item--active" count="1"></div>
+                    <div class="page-stepper__item page-stepper__item--active" count="2"></div>
+                    <div class="page-stepper__item" count="3"></div>
+                </div>
+            </div>
+            <div class="point-arrangement__content">
+                <div class="margin-top-40">
+                    <div class="point-arrangement__content__header margin-bottom-40">Sonuç Belgeleri</div>
+                    <div class="">
+                        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+                            rel="stylesheet">
+                        <form class="form-container" enctype='multipart/form-data'>
+                            <div class="upload-files-container">
+                                <div class="drag-file-area">
+                                    <div class="upload-icon"><i class="fa-solid fa-upload"></i></div>
+                                    <h3 class="dynamic-message">Lütfen ilgili dosyanızı buraya sürükleyiniz. </h3>
+                                    <label class="label"> ya da <span class="browse-files"> <input type="file"
+                                                class="default-file-input" /> <span class="browse-files-text">dosya
+                                                seçiniz</span></span> </label>
+                                </div>
+                                <span class="cannot-upload-message"> <span class="material-icons-outlined"><i
+                                            class="fa-solid fa-triangle-exclamation"></i></span>
+                                    Dosya seçiniz <span class="material-icons-outlined cancel-alert-button"><i
+                                            class="fa-solid fa-xmark"></i></span> </span>
+                                <div class="file-block">
+                                    <div class="file-info"> <span class="material-icons-outlined file-icon"><i
+                                                class="fa-solid fa-file"></i></span> <span class="file-name"> </span> |
+                                        <span class="file-size"> </span>
+                                    </div>
+                                    <span class="material-icons remove-file-icon">
+                                        <i class="fa-solid fa-trash"></i></span>
+                                    <div class="progress-bar"> </div>
+                                </div>
+                                <button type="button" class="upload-button"> Yükle </button>
+                            </div>
+                        </form>
+                        <div class="navigation-bottons">
+                            <div class="step1-prev-position"><a href="pointArrangement.html"> <button class="step1-prev"
+                                        type="button"><i class="fa-solid fa-left-long"></i></button></a> </div>
+                            <div class="step1-next-position"><a href="pointArrangement3.html"> <button
+                                        class="step1-next" type="button"><i
+                                            class="fa-solid fa-right-long"></i></button></a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="robo-text-animate display-none">Şifrelerinizi formata uygun girmeyi unutmayın. Şifreni unuttuğunda benimle iletişime geçmekten lütfen çekinme.</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/textAnimation.js"></script>
+    <script src="assets/js/upload.js"></script>
+</body>
+
+</html>

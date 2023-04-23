@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/global/layout.css">
+    <link rel="stylesheet" href="assets/css/global/Icons/icofont.min.css">
+    <link rel="stylesheet" href="assets/css/personalInfo.css">
+    <link rel="stylesheet" href="assets/css/global/modernInput.css">
+    <link rel="stylesheet" href="assets/css/global/footer.css">
+    <link rel="stylesheet" href="assets/css/pointArrangement.css">
+    <link rel="stylesheet" href="assets/css/global/pageStepper.css">
+    <link rel="stylesheet" href="assets/css/score.css">
+    <link rel="stylesheet" href="assets/css/global/global.css">
+    <link rel="stylesheet" href="assets/css/global/upload.css">
+</head>
+
+<body>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu__container">
+            <i class="icofont-close-line-circled mobile-menu__cancel"></i>
+            <div class="mobile-menu-logo">
+                <img src="assets/images/tusdata_header_logo.png" alt="">
+            </div>
+
+            <div class="mobile-menu-content">
+
+                <div class="mobile-menu__item mobile-menu__item--active">
+                    <input type="radio" name="mobile-menu" id="mobile-menu-1" hidden>
+                    <label for="mobile-menu-1">
+                        <div class="menu-item"><i class="icofont-users-alt-4 menu-icon"></i>Kullanıcı Ayarları</div>
+                        <ul class="mobile-menu__item__sub-menu">
+                            <a href="personalInfo.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Kişisel
+                                    Bilgiler</li>
+                            </a>
+                            <a href="passwordProcess.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Şifre
+                                    İşlemleri</li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+                <div class="mobile-menu__item mobile-menu__item--active">
+                    <input type="radio" name="mobile-menu" id="mobile-menu-2" hidden>
+                    <label for="mobile-menu-2">
+                        <div class="menu-item"><i class="icofont-doctor menu-icon"></i>Tercih İşlemleri</div>
+                        <ul class="mobile-menu__item__sub-menu">
+                            <a href="score.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Puan ve
+                                    Sıralama</li>
+                            </a>
+                            <a href="preference.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Tercih
+                                    Yap
+                                </li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-3" hidden>
+                    <label for="mobile-menu-3">
+                        <a href="programmeList.html">
+
+                            <div class="menu-item"><i class="icofont-chart-bar-graph menu-icon"></i></i>Kontenjanlar
+                            </div>
+                        </a>
+                    </label>
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-4" hidden>
+
+                    <label for="mobile-menu-4">
+                        <a href="conclusion.html">
+
+                            <div class="menu-item"><i class="icofont-file-alt menu-icon"></i>Yerleştirme Sonuçları
+                            </div>
+                        </a>
+                    </label>
+
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-5" hidden>
+                    <label for="mobile-menu-5">
+                        <a href="">
+
+                            <div class="menu-item"> <i class="icofont-pie-chart menu-icon"></i>İstatistikler</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-6" hidden>
+                    <label for="mobile-menu-6">
+                        <a href="contact.html">
+
+                            <div class="menu-item"> <i class="icofont-ui-call menu-icon"></i>İletişim ve Destek</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-7" hidden>
+                    <label for="mobile-menu-7">
+                        <a href="mistake.html">
+                            <div class="menu-item"><i class="icofont-error menu-icon"></i>Hata Bildir</div>
+                        </a>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="layout">
+
+        <nav class="navbar">
+            <label for="hamburger-sidebar" id="hamburger-menu">
+                <i class="icofont-navigation-menu"></i>
+            </label>
+            <ul class="navbar__list">
+                <li class="navbar__list__item"><a href="#"><i class="icofont-doctor"></i> Merhaba Betül</a></li>
+                <li class="navbar__list__item"><a href="#"><i class="icofont-exit"></i> Çıkış Yap</a></li>
+            </ul>
+        </nav>
+        <div class="layout__videos">
+            <video id="vid" src="assets/videos/loop.mp4" autoplay muted loop style="z-index: 0;
+            object-fit: cover;
+            position: absolute;
+            bottom: -323px;"></video>
+        </div>
+        <div class="layout__logo">
+            <img src="assets/images/tusdata_header_logo.png" alt="">
+        </div>
+    </header>
+
+    <div class="layout__content">
+        <ul class="nav-brands">
+            <li class="nav-brands__item"><a href="#">Anasayfa</a></li>
+            <li class="nav-brands__item"><a href="#">Kişisel Bilgiler</a></li>
+        </ul>
+
+        <div class="layout__content__side">
+
+            <div class="layout__content__side-bar">
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu-1" hidden>
+                    <label for="sub-menu-1">
+                        <i class="icofont-users-alt-4 menu-icon"></i>
+                        <div class="menu-item">Kullanıcı Ayarları</div>
+                        <ul
+                            class="layout__content__side-bar__item__sub-menu layout__content__side-bar__item__sub-menu--2">
+                            <a href="personalInfo.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i> Kişisel
+                                    Bilgiler</li>
+                            </a>
+                            <a href="passwordProcess.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i> Şifre
+                                    İşlemleri</li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item layout__content__side-bar__item--active">
+                    <input type="radio" name="sub-menu" id="sub-menu-2" hidden>
+                    <label for="sub-menu-2">
+                        <i class="icofont-doctor menu-icon"></i>
+                        <div class="menu-item">Tercih İşlemleri</div>
+                        <ul
+                            class="layout__content__side-bar__item__sub-menu layout__content__side-bar__item__sub-menu--2">
+                            <a class="text-center" href="score.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Puan ve
+                                    Sıralama</li>
+                            </a>
+                            <a class="text-center" href="preference.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Tercih
+                                    Yap</li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu-3" hidden>
+                    <label for="sub-menu-3">
+                        <a class="text-center" href="programmeList.html">
+                            <i class="icofont-chart-growth menu-icon"></i>
+                            <div class="menu-item">Kontenjanlar</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+
+                    <label for="sub-menu">
+                        <a class="text-center" href="conclusion.html">
+                            <i class="icofont-certificate-alt-1 menu-icon"></i>
+                            <div class="menu-item">Yerleştirme Sonuçları</div>
+                        </a>
+                    </label>
+
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+                    <label for="sub-menu">
+                        <a class="text-center" href="">
+                            <i class="icofont-pie-chart menu-icon"></i>
+                            <div class="menu-item">İstatistikler</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+                    <label for="sub-menu">
+                        <a class="text-center" href="contact.html">
+                            <i class="icofont-ui-call menu-icon"></i>
+                            <div class="menu-item">İletişim ve Destek</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+                    <label for="sub-menu">
+                        <a class="text-center" href="">
+                            <i class="icofont-error menu-icon"></i>
+                            <div class="menu-item">Hata Bildir</div>
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <div class="layout__content__side__right personal-info">
+
+
+
+
+                <div class="step-1" id="checkout-progress" data-current-step="1">
+                    <div class="progress-bar">
+                        <div class="step step-1 active"><span> 1</span>
+                            <div class="fa fa-check opaque"></div>
+                            <div class="step-label"> Puan Sıralama</div>
+                        </div>
+                        <div class="step step-2"><span> 2</span>
+                            <div class="fa fa-check opaque"></div>
+                            <div class="step-label"> Belge Yükleme</div>
+                        </div>
+                        <div class="step step-3"><span> 3</span>
+                            <div class="fa fa-check opaque"></div>
+                            <div class="step-label"> Önizleme</div>
+                        </div>
+                        <div class="step step-4"><span> 4</span>
+                            <div class="fa fa-check opaque"></div>
+                            <div class="step-label"> Onay</div>
+                        </div>
+
+                    </div>
+                </div>
+                <br><br><br>
+                <section id="section1" class="section1" style="display:block;">
+                    <div class="point-arrangement__content">
+                        <div class="margin-top-40">
+                            <div class="score-card">
+                                <div class="point-arrangement__content__header margin-bottom-40">Puan ve Sıralama</div>
+                                <div class="point-arrangement__content__item">
+                                    <div class="point-arrangement__content__item__input modern-input">
+                                        <label class="w-100">
+                                            <input maxlength="3" id="point" type="text" required>
+                                            <span>Puanınızı Giriniz</span>
+                                        </label>
+                                    </div>
+                                    <div class="point-arrangement__content__item__input modern-input">
+                                        <label class="w-100">
+                                            <input type="number" id="order" required>
+                                            <span>Sıralamanızı Giriniz</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section2" class="section2" style="display:none;">
+                    <div class="point-arrangement__content">
+                        <div class="margin-top-40">
+
+                            <div class="">
+                                <link
+                                    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined"
+                                    rel="stylesheet">
+                                <form class="form-container" enctype='multipart/form-data'>
+                                    <div class="upload-files-container">
+                                        <div class="drag-file-area">
+                                            <div class="upload-icon"><i class="fa-solid fa-upload"></i></div>
+                                            <h3 class="dynamic-message">Lütfen ilgili dosyanızı buraya sürükleyiniz.
+                                            </h3>
+                                            <label class="label"> ya da <span class="browse-files"> <input type="file"
+                                                        class="default-file-input" /> <span
+                                                        class="browse-files-text">dosya
+                                                        seçiniz</span></span> </label>
+                                        </div>
+                                        <span class="cannot-upload-message"> <span class="material-icons-outlined"><i
+                                                    class="fa-solid fa-triangle-exclamation"></i></span>
+                                            Dosya seçiniz <span class="material-icons-outlined cancel-alert-button"><i
+                                                    class="fa-solid fa-xmark"></i></span> </span>
+                                        <div class="file-block">
+                                            <div class="file-info"> <span class="material-icons-outlined file-icon"><i
+                                                        class="fa-solid fa-file"></i></span> <span class="file-name">
+                                                </span> |
+                                                <span class="file-size"> </span>
+                                            </div>
+                                            <span class="material-icons remove-file-icon">
+                                                <i class="fa-solid fa-trash"></i></span>
+                                            <div class="progress-bar"> </div>
+                                        </div>
+                                        <!-- <button type="button" class="upload-button"> Yükle </button> -->
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section3" class="section3" style="display:none;">
+                    <div class="point-arrangement__content">
+                        <div class="margin-top-40">
+                            <div class="score-card">
+                                <div class="point-arrangement__content__header margin-bottom-40">Puan ve Sıralama</div>
+                                <div class="point-arrangement__content__item">
+                                    <div class="point-arrangement__content__item__input modern-input">
+                                        <label class="w-100">
+                                            <input type="text" required>
+                                            <span>Puanınızı Giriniz</span>
+                                        </label>
+                                    </div>
+                                    <div class="point-arrangement__content__item__input modern-input">
+                                        <label class="w-100">
+                                            <input type="number" required>
+                                            <span>Sıralamanızı Giriniz</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="section4" class="section4 " style="display:none;">
+                    <p>Önceki adımlarda yaptığınız işlemleri kontrol ederek onay butonuna basınız. Herhangi bir yanlış
+                        dosya yükleme veya hatalı puan ve sıralama girme durumunda iletişim kısmında bulunan ilgili
+                        birim ile iletişime geçiniz.</p>
+                </section>
+                <section id="section5" class="section5 " style="display:none;">
+                    <div class="section5-flex">
+                        <p>Belgeleriniz onay için gönderilmiştir.</p>
+                        <div>
+                            <script
+                                src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_rqilnf3p.json"
+                                background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                                autoplay></lottie-player>
+                        </div>
+
+                    </div>
+                </section>
+                <div class="button-container">
+                    <div class="btn btn-prev disabled"><i class="icofont-swoosh-left"></i></div>
+                    <div class="btn btn-next"> <i class="icofont-swoosh-right"></i></div>
+                    <div class="btn btn-submit" style="display:none;">Onay</div>
+                </div>
+
+
+
+            </div>
+            <div class="layout__content__side__advert">
+
+                <div class="layout__content__side__advert__robot">
+                    <img src="assets/images/ws.png" alt="">
+                </div>
+                <div class="layout__content__side__advert__robot__text">
+                    <div class="layout__content__side__advert__robot__text__icon"><i
+                            class="icofont-close-line close-robo-text"></i></div>
+                    <div class="text-animation">-</div>
+
+                </div>
+                <div class="sidebar__application">
+                    <div class="footer__application__play-store footer__application__item">
+                        <figure class="footer__application__play-store__icon">
+                            <img src="assets/images/playstore.png" alt="">
+                        </figure>
+                        <div class="footer__application__play-store__info">
+                            <div class="footer__application__play-store__app">Google Play</div>
+                            <div class="footer__application__play-store__text">İndirmek için tıklayınız.</div>
+
+                        </div>
+                    </div>
+                    <div class="footer__application__ios footer__application__item">
+                        <figure class="footer__application__play-store__icon">
+                            <img src="assets/images/apple.png" alt="">
+                        </figure>
+                        <div class="footer__application__play-store__info">
+                            <div class="footer__application__app-store__app">App Store</div>
+                            <div class="footer__application__play-store__text">İndirmek için tıklayınız.</div>
+
+                        </div>
+                    </div>
+                    <div class="footer__application__telegram footer__application__item">
+                        <figure class="footer__application__telegram__icon">
+                            <img src="assets/images/telegram.png" alt="">
+                        </figure>
+                        <div class="footer__application__telegram__info">
+                            <div class="footer__application__telegram__app">Telegram</div>
+                            <div class="footer__application__telegram__text">Katılmak için tıklayınız.</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer__right">
+            <i class="icofont-copyright"></i>
+            <div class="footer__right__text">2023 Tüm haklar TUSDATA'ya aittir. <a href="">TUSDATA</a> / <a
+                    href="">DUSDATA </a> </div>
+        </div>
+        <!-- <div class="footer__application">
+            <div class="footer__application__play-store footer__application__item">
+                <figure class="footer__application__play-store__icon">
+                    <img src="assets/images/playstore.png" alt="">
+                </figure>
+                <div class="footer__application__play-store__info">
+                    <div class="footer__application__play-store__app">Google Play</div>
+                    <div class="footer__application__play-store__text">İndirmek için tıklayınız.</div>
+                   
+                </div>
+            </div>
+            <div class="footer__application__ios footer__application__item">
+                <figure class="footer__application__play-store__icon">
+                    <img src="assets/images/apple.png" alt="">
+                </figure>
+                <div class="footer__application__play-store__info">
+                    <div class="footer__application__app-store__app">App Store</div>
+                    <div class="footer__application__play-store__text">İndirmek için tıklayınız.</div>
+                    
+                </div>
+            </div>
+        </div> -->
+    </footer>
+    <div class="robo-text-animate display-none">Puanınızı max değer 100 olacak şekilde, virgülden sonra 2 hane girecek
+        şekilde doldurunuz. Yanlış belge ve puan girişi durunda bizimle iletişime geçiniz..</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/textAnimation.js"></script>
+
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/upload.js"></script>
+    <script>
+        $('.btn-next').on('click', function () {
+
+            var currentStepNum = $('#checkout-progress').data('current-step');
+            var nextStepNum = (currentStepNum + 1);
+            var currentStep = $('.step.step-' + currentStepNum);
+            var nextStep = $('.step.step-' + nextStepNum);
+            var progressBar = $('#checkout-progress');
+            $('.btn-prev').removeClass('disabled');
+            $('#section' + currentStepNum).toggle();
+            $('#section' + nextStepNum).toggle();
+            if (nextStepNum == 4) {
+                $(this).toggle();
+                $('.btn-submit').toggle();
+            }
+            /*if(nextStepNum == 5){
+                $(this).addClass('disabled');
+            }*/
+            $('.checkout-progress').removeClass('.step-' + currentStepNum).addClass('.step-' + (currentStepNum + 1));
+
+            currentStep.removeClass('active').addClass('valid');
+            currentStep.find('span').addClass('opaque');
+            currentStep.find('.fa.fa-check').removeClass('opaque');
+
+            nextStep.addClass('active');
+            progressBar.removeAttr('class').addClass('step-' + nextStepNum).data('current-step', nextStepNum);
+        });
+
+        $('.btn-submit').on('click', function () {
+            $('.btn-submit').toggle('disabled');
+            $('.btn-prev').toggle();
+            var currentStepNum = $('#checkout-progress').data('current-step');
+            var currentStep = $('.step.step-' + currentStepNum);
+            currentStep.removeClass('active').addClass('valid');
+            currentStep.find('.fa.fa-check').removeClass('opaque');
+        });
+
+        $('.btn-prev').on('click', function () {
+
+            var currentStepNum = $('#checkout-progress').data('current-step');
+            var prevStepNum = (currentStepNum - 1);
+            var currentStep = $('.step.step-' + currentStepNum);
+            var prevStep = $('.step.step-' + prevStepNum);
+            var progressBar = $('#checkout-progress');
+            $('.btn-next').removeClass('disabled');
+            $('#section' + currentStepNum).toggle();
+            $('#section' + prevStepNum).toggle();
+            if (currentStepNum == 4) {
+                $('.btn-submit').toggle();
+                $('.btn-next').toggle();
+            }
+            if (currentStepNum == 1) {
+                return false;
+            }
+            if (prevStepNum == 1) {
+                $(this).addClass('disabled');
+            }
+            $('.checkout-progress').removeClass('.step-' + currentStepNum).addClass('.step-' + (prevStepNum));
+
+            currentStep.removeClass('active');
+            prevStep.find('span').removeClass('opaque');
+            prevStep.find('.fa.fa-check').addClass('opaque');
+
+            prevStep.addClass('active').removeClass('valid');
+            progressBar.removeAttr('class').addClass('step-' + prevStepNum).data('current-step', prevStepNum);
+        });
+    </script>
+    <script>
+
+        function controlLimit(element, max, min) {
+            element.addEventListener('input', (e) => {
+                if (Number(e.target.value) > max) {
+                    e.target.value = max
+                }
+
+                if (e.target.value || "") {
+                    if (Number(e.target.value) < min) {
+                        e.target.value = min;
+
+                    }
+                }
+            })
+        }
+        controlLimit(document.querySelector('#point'), 100, 1);
+        controlLimit(document.querySelector('#order'), 100000, 1);
+
+        document.querySelector('.btn.btn-submit').addEventListener('click', () => {
+            document.querySelector('#section4').style.display = 'none';
+            document.querySelector('#section5').style.display = 'block';
+        })
+    </script>
+</body>
+
+</html>

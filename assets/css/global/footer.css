@@ -1,0 +1,170 @@
+.footer {
+    background-image: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin-top: -124px;
+    padding: 65px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__application {
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    padding: 30px;
+
+}
+
+.footer__application__play-store__icon {
+    width: 60px;
+
+}
+
+.footer__application__telegram__icon {
+    width: 60px;
+
+}
+
+.footer__application__play-store__icon img {
+
+    width: 100% !important;
+}
+
+.footer__application__telegram__icon img {
+
+    width: 100% !important;
+}
+
+.footer__application__item {
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    width: max-content;
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all .4s;
+    margin: 0 auto;
+
+}
+
+.footer__application__item:hover {
+    background-color: #fff;
+}
+
+.footer__application__play-store__app {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: #343a40;
+}
+
+.footer__application__telegram__app {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: #343a40;
+}
+
+.footer__application__app-store__app {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: #343a40;
+}
+
+.footer__application__play-store__text {
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.footer__application__telegram__text {
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.footer__application__play-store__info {
+    line-height: 30px;
+}
+
+.footer__application__telegram__info {
+    line-height: 30px;
+}
+
+.footer__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8e8d9e;
+    font-size: 14px;
+}
+
+.footer__right__text a {
+    text-decoration: none;
+    color: #228be6;
+}
+
+.footer__right__text a:hover {
+    font-weight: bold;
+}
+
+.footer__social-media {
+    display: flex;
+    gap: 13px;
+
+
+}
+
+.footer__social-media i {
+    font-size: 24px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.28));
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .footer__application__play-store__icon,
+    .footer__application__telegram__icon {
+        width: 40px !important;
+    }
+
+    .footer__application__item {
+        width: 100% !important;
+    }
+
+    .footer {
+        padding: 65px 15px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer__right {
+        text-align: center;
+        display: block;
+    }
+
+    .footer__right div {
+        display: inline;
+    }
+
+    .footer__application {
+        display: flex;
+    }
+
+   
+
+    .footer__application {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer__application {
+        display: block;
+    }
+    .footer__application div:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+   
+}

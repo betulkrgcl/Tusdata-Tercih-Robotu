@@ -1,0 +1,108 @@
+
+.gen-stat__total-user{
+    box-shadow: rgb(247, 247, 247) 0px 0px 15px 10px;
+    padding: 20px;
+    display: flex;
+    width: 47%;
+    height: 118px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+
+.gen-stat__total-user__title{
+    font-weight: 600;
+    color: rgba(27, 49, 85, 0.6);
+    font-size:14px;
+}
+.gen-stat__total-user__value{
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size:1.40rem;
+}
+
+.gen-stat__total-user__icon{
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: #fff;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.28));
+    border-radius: 50%;
+    font-size: 30px;
+
+}
+.gen-stat{
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    flex-wrap: wrap !important;
+}
+.gen-stat__total--file__icon{
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+.gen-stat__total--preference__icon{
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+}
+.gen-stat__total--not-preference__icon{
+    background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+.gen-stat__total--preference45__icon{
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+.gen-stat__total--preference-notyet__icon{
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
+}
+.gen-stat__total--down45__icon{
+    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+}
+.gen-stat__total--bot__icon{
+    background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+}
+.gen-stat__total-user img{
+    width: 293px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    overflow: hidden;
+}
+.gen-stat__total-user{
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (max-width: 1000px){
+    .gen-stat__total-user{
+        width: 70%;
+    }
+
+    .gen-stat__total-user img{
+        height: 170px;
+    }
+    .gen-stat__total-user{
+        height: 170px;
+    }
+}
+@media screen and (max-width: 600px){
+    .gen-stat__total-user{
+        width: 100%;
+    }
+
+    .gen-stat__total-user img{
+        height: 130px;
+    }
+    .gen-stat__total-user{
+        height: 130px;
+    }
+}

@@ -1,0 +1,39 @@
+.particular-stat__table {
+    text-align: center;
+}
+
+.particular-stat__table__head th {
+    font-weight: 600;
+    vertical-align: middle;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    font-size: 14px;
+    border: 1px solid #f2f4ff;
+    padding: 20px;
+}
+
+.particular-stat__table td {
+    font-weight: 600;
+    vertical-align: middle;
+    padding: 30px;
+    font-size: 14px;
+    border: 1px solid #f2f4ff;
+}
+
+.particular-stat__table td {
+    font-weight: 600;
+    vertical-align: middle;
+    padding: 13px 64px;
+    font-size: 14px;
+    border: 1px solid #f2f4ff;
+}
+
+.particular-stat__total {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+@media screen and (max-width: 600px) {
+    .particular-stat {
+        overflow-x: scroll;
+    }
+}

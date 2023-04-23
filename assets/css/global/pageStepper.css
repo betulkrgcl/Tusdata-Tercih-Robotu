@@ -1,0 +1,105 @@
+.page-stepper {
+    display: flex;
+    gap: 100px;
+}
+
+.page-stepper__item {
+    background-color: #D1D1D1;
+    border-radius: 50%;
+    padding: 40px;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 0 12px -2px #f7f7f7;
+}
+
+.page-stepper__item--active {
+    border-color: #3a2787;
+    background-image: linear-gradient(to right, #6a11cb 0%, #3a2787 100%);
+    box-shadow: 0 0 12px -2px #f7f7f7;
+}
+
+.page-stepper__item::before {
+    content: attr(count);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.page-stepper__item:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    left: 100%;
+    background: #D1D1D1;
+}
+
+
+.robot__right-side__item {
+    display: flex;
+    justify-content: center;
+}
+
+.step1-next {
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 12px -2px #f7f7f7;
+    border-color: #3a2787;
+    background-image: linear-gradient(to right, #6a11cb 0%, #3a2787 100%);
+}
+
+.step1-next-position {
+    text-align: end;
+}
+
+.step1-prev {
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-color: #3a2787;
+    background-image: linear-gradient(to right, #6a11cb 0%, #3a2787 100%);
+    box-shadow: 0 0 12px -2px #f7f7f7;
+}
+
+.step1-prev-position {
+    text-align: end;
+}
+
+.navigation-bottons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .page-stepper {
+        gap: 100px;
+    }
+
+    .page-stepper__item:not(:last-of-type)::after {
+        width: 100px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .page-stepper {
+        gap: 50px;
+    }
+
+    .page-stepper__item:not(:last-of-type)::after {
+        width: 54px;
+    }
+}

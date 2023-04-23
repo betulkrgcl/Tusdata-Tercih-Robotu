@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/global/layout.css">
+    <link rel="stylesheet" href="assets/css/global/Icons/icofont.min.css">
+    <link rel="stylesheet" href="assets/css/programmeList.css">
+    <link rel="stylesheet" href="assets/css/global/modernInput.css">
+    <link rel="stylesheet" href="assets/css/global/tabsMenu.css">
+    <link rel="stylesheet" href="assets/css/global/table.css">
+    <link rel="stylesheet" href="assets/css/global/popup.css">
+    <link rel="stylesheet" href="assets/css/global/footer.css">
+    <link rel="stylesheet" href="assets/css/preference.css">
+    <link rel="stylesheet" href="assets/css/global/global.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body>
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu__container">
+            <i class="icofont-close-line-circled mobile-menu__cancel"></i>
+            <div class="mobile-menu-logo">
+                <img src="assets/images/tusdata_header_logo.png" alt="">
+            </div>
+
+            <div class="mobile-menu-content">
+
+                <div class="mobile-menu__item mobile-menu__item--active">
+                    <input type="radio" name="mobile-menu" id="mobile-menu-1" hidden>
+                    <label for="mobile-menu-1">
+                        <div class="menu-item"><i class="icofont-users-alt-4 menu-icon"></i>Kullanıcı Ayarları</div>
+                        <ul class="mobile-menu__item__sub-menu">
+                            <a href="personalInfo.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Kişisel
+                                    Bilgiler</li>
+                            </a>
+                            <a href="passwordProcess.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Şifre
+                                    İşlemleri</li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+                <div class="mobile-menu__item mobile-menu__item--active">
+                    <input type="radio" name="mobile-menu" id="mobile-menu-2" hidden>
+                    <label for="mobile-menu-2">
+                        <div class="menu-item"><i class="icofont-doctor menu-icon"></i>Tercih İşlemleri</div>
+                        <ul class="mobile-menu__item__sub-menu">
+                            <a href="score.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Puan ve
+                                    Sıralama</li>
+                            </a>
+                            <a href="preference.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Tercih
+                                    Yap
+                                </li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-3" hidden>
+                    <label for="mobile-menu-3">
+                        <a href="programmeList.html">
+
+                            <div class="menu-item"><i class="icofont-chart-bar-graph menu-icon"></i></i>Kontenjanlar
+                            </div>
+                        </a>
+                    </label>
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-4" hidden>
+
+                    <label for="mobile-menu-4">
+                        <a href="conclusion.html">
+
+                            <div class="menu-item"><i class="icofont-file-alt menu-icon"></i>Yerleştirme Sonuçları
+                            </div>
+                        </a>
+                    </label>
+
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-5" hidden>
+                    <label for="mobile-menu-5">
+                        <a href="">
+
+                            <div class="menu-item"> <i class="icofont-pie-chart menu-icon"></i>İstatistikler</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-6" hidden>
+                    <label for="mobile-menu-6">
+                        <a href="contact.html">
+
+                            <div class="menu-item"> <i class="icofont-ui-call menu-icon"></i>İletişim ve Destek</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="mobile-menu__item">
+                    <input type="radio" name="sub-menu" id="mobile-menu-7" hidden>
+                    <label for="mobile-menu-7">
+                        <a href="mistake.html">
+                            <div class="menu-item"><i class="icofont-error menu-icon"></i>Hata Bildir</div>
+                        </a>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" style="display: none;">
+        <div class="popup__container">
+            <div class="popup__container__exit" onclick="hidePopup()"><i class="icofont-close"></i></div>
+            <div class="popup__container__header">Program Detayları</div>
+            <form class="program-list__container__form">
+                <div class="modern-input program-list__container__form__input">
+                    <label>
+                        <input class="search-input" type="text" required>
+                        <span>Aranacak kelimeyi giriniz</span>
+                    </label>
+                </div>
+                <button class="program-list__btn program-list__btn--search" type="button"><i
+                        class="icofont-search-2"></i></button>
+                <button onclick="clearInput()" class="program-list__btn program-list__btn--reset" type="reset"><i
+                        class="icofont-trash"></i></button>
+            </form>
+
+            <div class="preference-table">
+                <table class="table">
+                    <tr>
+                        <th>Program Kodu</th>
+                        <th>Program Adı</th>
+                        <th>Kontenjan Sayısı</th>
+
+                    </tr>
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000001</td>
+                        <td class="department-name">Adana Şehir Hastanesi - Çocuk Acil
+                        </td>
+
+                        <td>5</td>
+
+                    </tr>
+
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000002</td>
+                        <td class="department-name">Ankara Şehir Hastanesi - Çocuk Acil
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000003</td>
+                        <td class="department-name">Polatlı Güzelyalı Hastanesi - Beyin ve Sinir
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000004</td>
+                        <td class="department-name">Erzurum Heybeli Hastanesi - Dahiliye
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000005</td>
+                        <td class="department-name">Elazığ Yüreğir Hastanesi - Acil Servis
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000006</td>
+                        <td class="department-name">Ankara Şehir Hastanesi - Dahiliye
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">100000007</td>
+                        <td class="department-name">Ankara Şehir Hastanesi - Çocuk Acil
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+                    <tr class="table__item" is-selected="false">
+                        <td class="department-prefix">200000008</td>
+                        <td class="department-name">Ankara Şehir Hastanesi - Çocuk Acil
+                        </td>
+                        <td>5</td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="expand" style="display: none;">
+        <div class="expand__container">
+            <div class="popup__container__exit expand__container__exit" onclick="hideExpand()"><i
+                    class="icofont-reply"></i></div>
+            <div class="popup__container__header">Program Detayları</div>
+            <div class="preference-list__container">
+
+                <ul id="sortable" class="ui-sortable ui-sortable-popup">
+
+                    <li data-select="false" data-post-id="1" data-test="1"
+                        class="ui-sortable-handle ui-sortable-handle-popup preference-list unsortable">
+                        <span class="preference-list__id__number">1</span>
+                        <div class="preference__item__content">
+                            <div class="preference__item__program-code"></div>
+                            <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                            <div class="preference__item__program-name">
+                            </div>
+                            <div class="preference__item__program-exit remove-popup" onclick="RemovePopup(this)"><i class="icofont-close"></i></div>
+                        </div>
+                    </li>
+
+
+                    <li data-select="false" data-post-id="1" data-test="1"
+                        class="ui-sortable-handle ui-sortable-handle-popup preference-list unsortable">
+                        <span class="preference-list__id__number">2</span>
+                        <div class="preference__item__content">
+                            <div class="preference__item__program-code"></div>
+                            <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                            <div class="preference__item__program-name"></div>
+                            <div class="preference__item__program-exit remove-popup" onclick="RemovePopup(this)"><i class="icofont-close"></i></div>
+                        </div>
+                    </li>
+
+                    <li data-select="false" data-post-id="1" data-test="1"
+                        class="ui-sortable-handle ui-sortable-handle-popup preference-list unsortable">
+                        <span class="preference-list__id__number">3</span>
+                        <div class="preference__item__content">
+                            <div class="preference__item__program-code"></div>
+                            <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                            <div class="preference__item__program-name"></div>
+                            <div class="preference__item__program-exit remove-popup" onclick="RemovePopup(this)"><i class="icofont-close"></i></div>
+                        </div>
+                    </li>
+
+                    <li data-select="false" data-post-id="1" data-test="1"
+                        class="ui-sortable-handle ui-sortable-handle-popup preference-list unsortable">
+                        <span class="preference-list__id__number">4</span>
+                        <div class="preference__item__content">
+                            <div class="preference__item__program-code"></div>
+                            <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                            <div class="preference__item__program-name"></div>
+                            <div class="preference__item__program-exit remove-popup"><i class="icofont-close"></i></div>
+                        </div>
+                    </li>
+
+                    <li data-select="false" data-post-id="1" data-test="1"
+                        class="ui-sortable-handle ui-sortable-handle-popup preference-list unsortable">
+                        <span class="preference-list__id__number">5</span>
+                        <div class="preference__item__content">
+                            <div class="preference__item__program-code"></div>
+                            <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                            <div class="preference__item__program-name"></div>
+                            <div class="preference__item__program-exit remove-popup"><i class="icofont-close"></i></div>
+                        </div>
+                    </li>
+                    <li data-select="false" data-post-id="1" data-test="1"
+                        class="ui-sortable-handle ui-sortable-handle-popup preference-list unsortable">
+                        <span class="preference-list__id__number">6</span>
+                        <div class="preference__item__content">
+                            <div class="preference__item__program-code"></div>
+                            <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                            <div class="preference__item__program-name"></div>
+                            <div class="preference__item__program-exit remove-popup"><i class="icofont-close"></i></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="layout">
+        <nav class="navbar">
+            <label for="hamburger-sidebar" id="hamburger-menu">
+                <i class="icofont-navigation-menu"></i>
+            </label>
+            <ul class="navbar__list">
+                <li class="navbar__list__item"><a href="#"><i class="icofont-doctor"></i> Merhaba Betül</a></li>
+                <li class="navbar__list__item"><a href="#"><i class="icofont-exit"></i> Çıkış Yap</a></li>
+            </ul>
+        </nav>
+        <div class="layout__videos">
+            <video id="vid" src="assets/videos/loop.mp4" autoplay muted loop style="z-index: 0;
+            object-fit: cover;
+            position: absolute;
+            bottom: -323px;"></video>
+        </div>
+        <div class="layout__logo">
+            <img src="assets/images/tusdata_header_logo.png" alt="">
+        </div>
+    </header>
+
+    <div class="layout__content">
+        <div class="preference-nav-brands">
+            <ul class="nav-brands">
+                <li class="nav-brands__item"><a href="#">Anasayfa</a></li>
+                <li class="nav-brands__item"><a href="#">Tercih İşlemleri</a></li>
+            </ul>
+            <div class="full-screen" onclick="expandPopup()"><i class="icofont-expand"></i></div>
+        </div>
+
+        <div class="layout__content__side">
+            <div class="layout__content__side-bar">
+                <div class="layout__content__side-bar__item layout__content__side-bar__item--active">
+                    <input type="radio" name="sub-menu" id="sub-menu-1" hidden>
+                    <label for="sub-menu-1">
+                        <i class="icofont-users-alt-4 menu-icon"></i>
+                        <div class="menu-item">Kullanıcı Ayarları</div>
+                        <ul
+                            class="layout__content__side-bar__item__sub-menu layout__content__side-bar__item__sub-menu--2">
+                            <a href="personalInfo.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i> Kişisel
+                                    Bilgiler</li>
+                            </a>
+                            <a href="passwordProcess.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i> Şifre
+                                    İşlemleri</li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu-2" hidden>
+                    <label for="sub-menu-2">
+                        <i class="icofont-doctor menu-icon"></i>
+                        <div class="menu-item">Tercih İşlemleri</div>
+                        <ul
+                            class="layout__content__side-bar__item__sub-menu layout__content__side-bar__item__sub-menu--2">
+                            <a class="text-center" href="programmeList.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Puan ve
+                                    Sıralama</li>
+                            </a>
+                            <a class="text-center" href="preference.html">
+                                <li class="menu-item__sub-menu"><i class="icofont-star-alt-1 sub-menu-icon"></i>Tercih
+                                    Yap</li>
+                            </a>
+                        </ul>
+                    </label>
+                </div>
+
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu-3" hidden>
+                    <label for="sub-menu-3">
+                        <a class="text-center" href="programmeList.html">
+                            <i class="icofont-chart-growth menu-icon"></i>
+                            <div class="menu-item">Kontenjanlar</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+
+                    <label for="sub-menu">
+                        <a class="text-center" href="conclusion.html">
+                            <i class="icofont-certificate-alt-1 menu-icon"></i>
+                            <div class="menu-item">Yerleştirme Sonuçları</div>
+                        </a>
+                    </label>
+
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+                    <label for="sub-menu">
+                        <a class="text-center" href="">
+                            <i class="icofont-pie-chart menu-icon"></i>
+                            <div class="menu-item">İstatistikler</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+                    <label for="sub-menu">
+                        <a class="text-center" href="contact.html">
+                            <i class="icofont-ui-call menu-icon"></i>
+                            <div class="menu-item">İletişim ve Destek</div>
+                        </a>
+                    </label>
+                </div>
+                <div class="layout__content__side-bar__item">
+                    <input type="radio" name="sub-menu" id="sub-menu" hidden>
+                    <label for="sub-menu">
+                        <a class="text-center" href="mistake.html">
+                            <i class="icofont-error menu-icon"></i>
+                            <div class="menu-item">Hata Bildir</div>
+                        </a>
+                    </label>
+                </div>
+            </div>
+            <div class="layout__content__side__right program-list">
+                <div class="program-list__header">
+                    <div><i class="icofont-list"></i> Tercih İşlemleri</div>
+                </div>
+                <div class="preference-list__buttons">
+
+                    <div class="preference-list__buttons__reject preference-list__buttons__item">Tercih Yapmayacağım
+                    </div>
+                    <div class="preference-list__buttons__accept preference-list__buttons__item">Tercihimi Kesinleştir
+                    </div>
+                    <div class="preference-list__buttons__save preference-list__buttons__item">Tercihimi Kaydet</div>
+                </div>
+
+                <div class="preference-list__buttons-2 display-none">
+                    <div class="preference-list__buttons__return-back preference-list__buttons__item">Tercih Yapacağım
+                    </div>
+                </div>
+
+                <div class="preference-list__buttons-3 display-none ">
+                    <div
+                        class="preference-list__buttons__return-preference preference-list__buttons__item preference-active">
+                        Tercihi Çöz
+                    </div>
+                </div>
+
+                <div class="preference-list__container">
+
+
+                    <ul id="sortable" class="ui-sortable ui-sortable-main">
+
+                        <li data-select="false" data-post-id="1" data-test="1"
+                            class="ui-sortable-handle ui-sortable-handle-main  preference-list unsortable">
+                            <span class="preference-list__id__number">1</span>
+                            <div class="preference__item__content">
+                                <div class="preference__item__program-code"></div>
+                                <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                                <div class="preference__item__program-name">
+                                </div>
+                                <div class="preference__item__program-exit remove-main"><i class="icofont-close"></i>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li data-select="false" data-post-id="1" data-test="1"
+                            class="ui-sortable-handle ui-sortable-handle-main preference-list unsortable">
+                            <span class="preference-list__id__number">2</span>
+                            <div class="preference__item__content">
+                                <div class="preference__item__program-code"></div>
+                                <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                                <div class="preference__item__program-name"></div>
+                                <div class="preference__item__program-exit remove-main"><i class="icofont-close"></i>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li data-select="false" data-post-id="1" data-test="1"
+                            class="ui-sortable-handle ui-sortable-handle-main preference-list unsortable">
+                            <span class="preference-list__id__number">3</span>
+                            <div class="preference__item__content">
+                                <div class="preference__item__program-code"></div>
+                                <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                                <div class="preference__item__program-name"></div>
+                                <div class="preference__item__program-exit remove-main"><i class="icofont-close"></i>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li data-select="false" data-post-id="1" data-test="1"
+                            class="ui-sortable-handle ui-sortable-handle-main preference-list unsortable">
+                            <span class="preference-list__id__number">4</span>
+                            <div class="preference__item__content">
+                                <div class="preference__item__program-code"></div>
+                                <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                                <div class="preference__item__program-name">
+                                </div>
+                                <div class="preference__item__program-exit remove-main"><i class="icofont-close"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-select="false" data-post-id="1" data-test="1"
+                            class="ui-sortable-handle ui-sortable-handle-main unsortable preference-list">
+                            <span class="preference-list__id__number">5</span>
+                            <div class="preference__item__content">
+                                <div class="preference__item__program-code"></div>
+                                <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                                <div class="preference__item__program-name"></div>
+                                <div class="preference__item__program-exit remove-main"><i class="icofont-close"></i>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+
+
+                        <li data-select="false" data-post-id="1" data-test="1"
+                            class="ui-sortable-handle ui-sortable-handle-main preference-list unsortable">
+                            <div class="preference-list__id__number">6</div>
+                            <div class="preference__item__content">
+                                <div class="preference__item__program-code"></div>
+                                <button class="preference__item__program-select" onclick="showPopup()">Seç</button>
+                                <div class="preference__item__program-name"></div>
+                                <div class="preference__item__program-exit remove-main"><i class="icofont-close"></i>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer__right">
+            <i class="icofont-copyright"></i>
+            <div class="footer__right__text">2023 Tüm haklar TUSDATA'ya aittir. <a href="">TUSDATA</a> / <a
+                    href="">DUSDATA </a> </div>
+        </div>
+        <div class="footer__application">
+            <div class="footer__application__play-store footer__application__item">
+                <figure class="footer__application__play-store__icon">
+                    <img src="assets/images/playstore.png" alt="">
+                </figure>
+                <div class="footer__application__play-store__info">
+                    <div class="footer__application__play-store__app">Google Play</div>
+                    <div class="footer__application__play-store__text">İndirmek için tıklayınız.</div>
+
+                </div>
+            </div>
+            <div class="footer__application__ios footer__application__item">
+                <figure class="footer__application__play-store__icon">
+                    <img src="assets/images/apple.png" alt="">
+                </figure>
+                <div class="footer__application__play-store__info">
+                    <div class="footer__application__app-store__app">App Store</div>
+                    <div class="footer__application__play-store__text">İndirmek için tıklayınız.</div>
+
+                </div>
+            </div>
+            <div class="footer__application__telegram footer__application__item">
+                <figure class="footer__application__telegram__icon">
+                    <img src="assets/images/telegram.png" alt="">
+                </figure>
+                <div class="footer__application__telegram__info">
+                    <div class="footer__application__telegram__app">Telegram</div>
+                    <div class="footer__application__telegram__text">Katılmak için tıklayınız.</div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/popup.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="assets/js/preference.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/popup.js"></script>
+
+</body>
+
+</html>

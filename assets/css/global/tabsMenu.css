@@ -1,0 +1,73 @@
+.tabs-menu {
+    margin-top: 40px;
+}
+
+.tabs-menu__header {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.tabs-menu__header::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    background-color: #d5dfe7;
+    height: 1px;
+}
+
+.tabs-menu__content {
+    margin-top: 40px;
+    display: none;
+}
+
+.tabs-menu__item {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#tabs-menu-1:checked~.tabs-menu__content-1,
+#tabs-menu-2:checked~.tabs-menu__content-2,
+#tabs-menu-3:checked~.tabs-menu__content-3,
+#tabs-menu-4:checked~.tabs-menu__content-4,
+#tabs-menu-5:checked~.tabs-menu__content-5,
+#tabs-menu-6:checked~.tabs-menu__content-6 {
+    display: block !important;
+}
+
+#tabs-menu-1:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-1'],
+#tabs-menu-2:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-2'],
+#tabs-menu-3:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-3'],
+#tabs-menu-4:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-4'],
+#tabs-menu-5:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-5'],
+#tabs-menu-6:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-6'] {
+    color: red;
+    font-weight: bold;
+}
+
+#tabs-menu-1:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-1']:after,
+#tabs-menu-2:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-2']:after,
+#tabs-menu-3:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-3']:after,
+#tabs-menu-4:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-4']:after,
+#tabs-menu-5:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-5']:after,
+#tabs-menu-6:checked~.tabs-menu__header .tabs-menu__item[for='tabs-menu-6']:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    background-color: red;
+    height: 2px;
+    left: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .tabs-menu__item {
+        width: unset;
+        font-size: 14px;
+    }
+}
+
+

@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #141c26 !important;
+    font-family: 'Monoton', cursive !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 300px;
+  
+}
+div {
+  font-size: 95px;
+  font-family: 'Monoton', cursive !important;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px #0e5e68,0 0 30px #1c6e79,0 0 6px #0a373d;
+  color: #6e38a5;
+  z-index: 100051;
+}
+div p{
+    margin:5px;
+    font-family: 'Monoton', cursive !important;
+}
+#error:hover {
+    text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff;
+}
+#code:hover {
+    text-shadow: 0 0 100px #0e5e68,0 0 40px #1c6e79,0 0 8px #0a373d; 
+}
+#error {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+  font-family: 'Monoton', cursive !important;
+  z-index: 999999;
+}
+#error span {
+  animation: upper 6s linear infinite;
+  font-family: 'Monoton', cursive !important;
+}
+#code{
+    z-index: 99999 !important;
+}
+#code span:nth-of-type(2) {
+  animation: lower 9s linear infinite;
+  font-family: 'Monoton', cursive !important;
+  
+}
+#code span:nth-of-type(1) {
+  text-shadow: none;
+  opacity:.4;
+  font-family: 'Monoton', cursive !important;
+}
+@keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:.99;
+    text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.4;
+    text-shadow: none; 
+  }
+}
+@keyframes lower {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.99;
+    text-shadow: 0 0 80px #0e5e68,0 0 30px #1c6e79,0 0 6px #0a373d;
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
+    opacity:0.4; 
+    text-shadow: none; 
+  }
+}
+.overlay {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:
+        repeating-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0) 100%);
+    background-size: auto 4px;
+    z-index: 1;
+  }
+  
+.overlay::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        0deg,
+        transparent 0%,
+        rgba(127, 17, 224, 0.05) 2%,
+        rgba(127, 17, 224, 0.8) 1%,
+        rgba(127, 17, 224, 0.1) 3%,
+        transparent 100%);
+    background-repeat: no-repeat;
+    animation: scan 7.5s linear 0s infinite;
+  }
+  
+  @keyframes scan {
+    0%        { background-position: 0 -100vh; }
+    35%, 100% { background-position: 0 100vh; }
+  }
+  
+  .not-found__guidance__text{
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+  }
+  .not-found__guidance__button{
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    animation: lower 9s linear infinite;
+    text-shadow: 0 0 80px #0e5e68, 0 0 30px #1c6e79, 0 0 6px #0a373d;
+    font-family: unset;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+.not-found__guidance{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #34496a;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #webgl {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  #webgl2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 2;
+  }
+  
+  #bg-box {
+    width: 802px;
+    height: 602px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .svg-box {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -207px;
+    margin-left: -184px;
+   
+  }
+  #robot {
+    cursor: pointer;
+  }

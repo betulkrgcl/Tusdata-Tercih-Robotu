@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/pointArrangement.css">
+    <link rel="stylesheet" href="assets/css/global/robotLeftSide.css">
+    <link rel="stylesheet" href="assets/css/global/robotRightSide.css">
+    <link rel="stylesheet" href="assets/css/global/pageStepper.css">
+    <link rel="stylesheet" href="assets/css/global/global.css">
+    <link rel="stylesheet" href="assets/css/global/modernInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="point-arrangement">
+        <div class="robot__left-side">
+            <div class="robot__left-side__item">
+                <figure class="robot__left-side__item__figure">
+                    <img src="assets/images/ws.png" alt="">
+                </figure>
+                <div class="robot__left-side__item__text layout__content__side__advert__robot__text">
+                    <div class="layout__content__side__advert__robot__text__icon"><i class="icofont-close-line close-robo-text"></i></div>
+                    <div class="text-animation">-</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="robot__right-side">
+            <div class="robot__right-side__item">
+                <div class="page-stepper">
+                    <div class="page-stepper__item page-stepper__item--active" count="1"></div>
+                    <div class="page-stepper__item page-stepper__item--active" count="2"></div>
+                    <div class="page-stepper__item page-stepper__item--active" count="3"></div>
+                </div>
+            </div>
+            <div class="point-arrangement__content">
+                <div class="margin-top-40">
+                    <div class="point-arrangement__content__header margin-bottom-40">Puan ve Sıralama</div>
+                    <div class="point-arrangement__content__item">
+                        <div class="point-arrangement__content__item__input modern-input">
+                            <label class="w-100">
+                                <input type="text" required>
+                                <span>Puanınızı Giriniz</span>
+                            </label>
+                        </div>
+                        <div class="point-arrangement__content__item__input modern-input">
+                            <label class="w-100">
+                                <input type="text" required>
+                                <span>Sıralamanızı Giriniz</span>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="navigation-bottons">
+                        <div class="step1-prev-position"><a href="pointArrangement2.html"> <button class="step1-prev"
+                                    type="button"><i class="fa-solid fa-left-long"></i></button></a> </div>
+                        <div class="step1-next-position"><a href=""> <button class="step1-next" type="button">Onayla ve
+                                    Git</button></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="robo-text-animate display-none">Şifrelerinizi formata uygun girmeyi unutmayın. Şifreni unuttuğunda benimle iletişime geçmekten lütfen çekinme.</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/textAnimation.js"></script>
+</body>
+
+</html>
